@@ -15,8 +15,9 @@ def run():
     """
     Run the crew.
     """
+    question = input("What is apigee proxy: ")
     inputs = {
-        'question': 'How often should I take breaks?',
+        'question': question,
     }
     MetaQuestKnowledge().crew().kickoff(inputs=inputs)
 
@@ -49,7 +50,7 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        'question': 'How often should I take breaks?',
+        'question': 'What is apigee proxy?',
     }
     try:
         MetaQuestKnowledge().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
