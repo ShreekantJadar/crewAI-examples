@@ -15,7 +15,7 @@ def run():
     """
     Run the crew.
     """
-    question = input("What is apigee proxy: ")
+    question = input("Ask anything: ")
     inputs = {
         'question': question,
     }
@@ -27,7 +27,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        'question': 'How often should I take breaks?',
+        'question': 'What is Apigee Proxy?',
     }
     try:
         MetaQuestKnowledge().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
